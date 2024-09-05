@@ -1,3 +1,14 @@
+// import kaplay
+import kaplay from "https://unpkg.com/kaplay@3001.0.0-alpha.20/dist/kaplay.mjs";
+
+
+import { add } from "./utils.js";
+
+console.log(add(3,4));
+
+
+
+
 // // var and constant
 
 // let myVariable = 4;  // let is used to declare variable if you don't want to declare variable with same name
@@ -59,7 +70,7 @@
 
 
 
-// Array
+// ////////////////                           Array
 
 // const numbers = [1,2,3,"4", "Abhi"]; 
 // console.log(numbers);
@@ -88,7 +99,7 @@
 
 
 
-// Object
+// ////////////////////////        Object
 
 // const  myData = {
 //     name : "Abhi",
@@ -111,9 +122,9 @@
 // console.log(myData);
 
 
-// Loops
+// ////////////////////////                      Loops
 
-// for loop
+// ///////////////////                         for loop
 // for (let i =0; i <100 ; i++) {
 //     console.log(i);  // loop will run 100 time where i goes to 0 to 99
 // }
@@ -130,6 +141,7 @@
 //     console.log(name);
 // }
 
+// //////////////////////////////////               while loop
 // let i = 0;
 // while (i< names.length) {
 //     console.log(names[i]);
@@ -137,7 +149,7 @@
 // }
 
 
-// Functions
+// ////////////////////////                 Functions
 
 // // calling functions before it declared
 // add(3,4)
@@ -150,3 +162,54 @@
 // // calling functions
 // add(3,4);
 
+
+// /////////////////////////////        passing by reference and passing by value
+
+// ////////////////////////         1. Passing by Value (for Primitive Types)
+// // In JavaScript, primitive types include:
+
+// // Number
+// // String
+// // Boolean
+// // Null
+// // Undefined
+// // Symbol
+// // BigInt
+// // When you pass a primitive value to a function, JavaScript creates a copy of that value. Changes made inside the function will not affect the original value.
+
+// function changeValue(value) {
+//     value = 100; // This only changes the local copy
+// }
+
+// let number = 50;
+// changeValue(number);
+
+// console.log(number); // Output: 50
+
+
+// //////////////////////         2. Passing by Reference (for Objects and Arrays)
+// // Objects and arrays in JavaScript are passed by reference. This means when you pass them to a function, it doesn’t create a copy; instead, the function gets a reference to the original object or array. So, changes made to the object or array inside the function will affect the original object or array.
+
+// function changeObject(obj) {
+//     obj.name = "John"; // This changes the original object
+// }
+
+// let person = { name: "Alice" };
+// changeObject(person);
+
+// console.log(person.name); // Output: "John"
+
+
+// /////////////////////////////////////// Local versus Global variable
+
+// const myName = "Abhi";  // declare global
+
+// function main() {
+//     const myName = "Max";  // declare local
+//     console.log(myName);
+    
+// }
+
+// console.log(myName);
+
+kaplay();
